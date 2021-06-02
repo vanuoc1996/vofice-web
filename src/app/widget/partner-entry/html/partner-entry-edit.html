@@ -1,0 +1,353 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+	<div class="card-body">
+		<!--h4 class="card-title mb-4">Add new product</h4>-->
+
+		<div [formGroup]="editForm">
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'partner-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="partnerId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'type-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="typeId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'department-type-id' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="departmentTypeId" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'code' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="code" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="name" pInputText type="text"  [required]='true' [maxLength]='300'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'trade-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="tradeName" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'nick-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="nickName" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'homeland' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="homeland" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'portrait-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="portraitId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'gender' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="gender" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'marital' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="marital" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'birthday' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="birthday" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'individual' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="individual" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'organization-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="organizationId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'scale-type-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="scaleTypeId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'industry-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="industryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'job-title' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="jobTitle" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'erp-code' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="erpCode" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'contract-no' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="contractNo" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'contract-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="contractDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'bank-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="bankId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'bank-office' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="bankOffice" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'bank-account' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="bankAccount" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'tax-id' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="taxId" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'national-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="nationalId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'religion-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="religionId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'education-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="educationId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'occupation-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="occupationId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'position-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="positionId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'login-user-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="loginUserId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'email-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="emailId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'phonebook-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="phonebookId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'contact-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="contactId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'billing-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="billingId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'resident-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="residentId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'population-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="populationId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'cover-image' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="coverImage" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'cover-image-file-entry-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="coverImageFileEntryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'cover-image-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="coverImageId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'cover-image-url' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="coverImageURL" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'small-image' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="smallImage" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'small-image-file-entry-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="smallImageFileEntryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'small-image-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="smallImageId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'small-image-url' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="smallImageURL" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'start-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="startDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'end-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="endDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'publish-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="publishDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'expire-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="expireDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'term-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="termDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'active-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="activeDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'extend-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="extendDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'cancel-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="cancelDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'description' | translate }}</label>
+				<div class="p-col-6">
+					<p-editor formControlName="description" [style]="{'height':'120px'}"></p-editor>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'status' | translate }}</label>
+				<div class="col-6">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+
+			<div class="border-top p-3 mt-3">
+				<button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save" (click)="onUpdate()"></button>
+				<button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash" (click)="onDelete()"></button>
+				<button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject" (click)="onCancel()"></button>
+			</div>
+		</div>
+	</div>
+</div>

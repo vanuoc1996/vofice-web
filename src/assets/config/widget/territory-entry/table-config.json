@@ -1,0 +1,169 @@
+{
+	"layout":
+		{
+			"name": "territory",
+			"showSearchPanel": true,
+			"enableToolbar": true,
+			"enableRowCheck": true,
+			"enableExport": true,
+			"tableColumns": [
+				{
+				"columns": [
+					{
+						"code": "code",
+						"name": "code",
+						"custom": true
+					},
+					{
+						"code": "parentCode",
+						"name": "parentCode",
+						"custom": true
+					},
+					{
+						"code": "province",
+						"name": "province",
+						"custom": true
+					},
+					{
+						"code": "district",
+						"name": "district",
+						"custom": true
+					},
+					{
+						"code": "village",
+						"name": "village",
+						"custom": true
+					},
+					{
+						"code": "building",
+						"name": "building",
+						"custom": true
+					},
+					{
+						"code": "name",
+						"name": "name",
+						"custom": true
+					},
+					{
+						"code": "fullName",
+						"name": "fullName",
+						"custom": true
+					}
+					]
+				}
+			],
+			"searchColumns": [
+				{
+				"columns": [
+					{
+						"code": "code",
+						"field": "code",
+						"label": "code",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "parentCode",
+						"field": "parentCode",
+						"label": "parentCode",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "province",
+						"field": "province",
+						"label": "province",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "district",
+						"field": "district",
+						"label": "district",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "village",
+						"field": "village",
+						"label": "village",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "building",
+						"field": "building",
+						"label": "building",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "name",
+						"field": "name",
+						"label": "name",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "fullName",
+						"field": "fullName",
+						"label": "fullName",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "status",
+						"field": "status",
+						"label": "status",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					}
+					]
+				}
+			],
+			"finders": [
+				],
+			"orders": [
+				{
+					"code": "default",
+					"label": "default"
+				}
+				]
+		}
+}

@@ -1,0 +1,57 @@
+{
+	"layout":
+		{
+			"name": "contact address",
+			"showSearchPanel": true,
+			"enableToolbar": true,
+			"enableRowCheck": true,
+			"enableExport": true,
+			"tableColumns": [
+				{
+				"columns": [
+					{
+						"code": "name",
+						"name": "name",
+						"custom": true
+					}
+					]
+				}
+			],
+			"searchColumns": [
+				{
+				"columns": [
+					{
+						"code": "name",
+						"field": "name",
+						"label": "name",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "status",
+						"field": "status",
+						"label": "status",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					}
+					]
+				}
+			],
+			"finders": [
+				],
+			"orders": [
+				{
+					"code": "default",
+					"label": "default"
+				}
+				]
+		}
+}

@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+
+metadata:
+  name: voffice-web
+
+build:
+  artifacts:
+    - image: cuongnt/voffice-web
+
+deploy:
+  kustomize:
+    paths: [ "./_deploy" ]
+

@@ -1,0 +1,3 @@
+<p-autoComplete field="name" [(ngModel)]="selected" [suggestions]="options" (completeMethod)="search($event)"
+				(onSelect)="onSelect($event)" (onUnselect)="onUnselect($event)" (onClear)="onClear($event)" [multiple]="widgetConfig.multiple">
+</p-autoComplete>

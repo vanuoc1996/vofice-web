@@ -1,0 +1,41 @@
+{
+	"layout":
+		{
+			"name": "workspace comment",
+			"showSearchPanel": true,
+			"enableToolbar": true,
+			"enableRowCheck": true,
+			"enableExport": true,
+			"tableColumns": [
+				{
+				"columns": [
+]
+				}
+			],
+			"searchColumns": [
+				{
+				"columns": [
+					{
+						"code": "status",
+						"field": "status",
+						"label": "status",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					}
+					]
+				}
+			],
+			"finders": [
+				],
+			"orders": [
+				{
+					"code": "default",
+					"label": "default"
+				}
+				]
+		}
+}

@@ -1,0 +1,180 @@
+export const EDIT_CONFIG  = {
+	layout:
+		{
+			legend: 'process order',
+			statementId: 'stage',
+			primaryKeyName: 'orderId',
+			parentKeyName: '',
+			partitionKeyName: '',
+			controls: [
+				{
+					code: 'orderId',
+					field: 'orderId',
+					label: 'orderId',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'processId',
+					field: 'processId',
+					label: 'processId',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'stageId',
+					field: 'stageId',
+					label: 'stageId',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'orderTypeId',
+					field: 'orderTypeId',
+					label: 'orderTypeId',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'name',
+					field: 'name',
+					label: 'name',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'startWhen',
+					field: 'startWhen',
+					label: 'startWhen',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'assignTo',
+					field: 'assignTo',
+					label: 'assignTo',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'duration',
+					field: 'duration',
+					label: 'duration',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'timeUnit',
+					field: 'timeUnit',
+					label: 'timeUnit',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'standalone',
+					field: 'standalone',
+					label: 'standalone',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'settings',
+					field: 'settings',
+					label: 'settings',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'description',
+					field: 'description',
+					label: 'description',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'status',
+					field: 'status',
+					label: 'status',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: false,
+					initValue: null,
+					inputValue: null,
+					options: null
+				},
+				{
+					code: 'statusDate',
+					field: 'statusDate',
+					label: 'statusDate',
+					visible: true,
+					initialise: true,
+					placeholder: '',
+					datetime: true,
+					initValue: null,
+					inputValue: null,
+					options: null
+				}
+			],
+		}
+};

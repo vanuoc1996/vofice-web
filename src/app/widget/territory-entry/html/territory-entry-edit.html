@@ -1,0 +1,131 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+	<div class="card-body">
+		<!--h4 class="card-title mb-4">Add new product</h4>-->
+
+		<div [formGroup]="editForm">
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'type' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="type" pInputText type="text"  [required]='true' [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'code' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="code" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'parent-code' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="parentCode" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'province' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="province" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'district' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="district" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'village' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="village" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'building' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="building" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="name" pInputText type="text"  [required]='true' [maxLength]='300'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'full-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="fullName" pInputText type="text"  [required]='true' [maxLength]='300'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'country-id' | translate }}</label>
+				<div class="col-6">
+					<app-country-select formControlName="countryId" ></app-country-select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'region-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="regionId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'longitude' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="longitude" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'latitude' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="latitude" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'start-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="startDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'end-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="endDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'description' | translate }}</label>
+				<div class="p-col-6">
+					<p-editor formControlName="description" [style]="{'height':'120px'}"></p-editor>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'status' | translate }}</label>
+				<div class="col-6">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+
+			<div class="border-top p-3 mt-3">
+				<button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save" (click)="onUpdate()"></button>
+				<button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash" (click)="onDelete()"></button>
+				<button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject" (click)="onCancel()"></button>
+			</div>
+		</div>
+	</div>
+</div>

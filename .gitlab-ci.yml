@@ -1,0 +1,69 @@
+stages:
+  - install_dependencies
+  - build
+  - package
+  - deploy
+
+node-packages:
+  stage: install_dependencies
+  image: node:14-alpine
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm i
+  only:
+    refs:
+      - master
+
+node-build:
+  image: node:14-alpine
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+      - dist/
+  script:
+    - npm run build --prod
+  only:
+    refs:
+      - master
+
+docker-build:
+  stage: package
+  cache:
+    paths:
+      - dist/
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [ "" ]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --insecure --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+k8s-deploy:
+  stage: deploy
+  image:
+    name: alpine/helm
+    entrypoint: [ "" ]
+  variables:
+    KUBECONFIG: /etc/deploy/config
+  before_script:
+    - mkdir -p /etc/deploy
+    - cat $KUBE_CONFIG_DEV | base64 -d > ${KUBECONFIG}
+  script:
+    - cd charts/voffice-web
+    - export APP_VERSION="$(grep "appVersion" Chart.yaml | cut -d " " -f 2)"
+    - export APP_VERSION=${APP_VERSION//\"/}
+    - export RELEASE_NAME="voffice-web-v${APP_VERSION//./-}"
+    - export DEPLOYS=$(helm ls -n voffice-dev | grep $RELEASE_NAME | wc -l)
+    - echo $DEPLOYS
+    - if [ ${DEPLOYS} -eq 0 ]; then echo "Install chart"; else echo "Upgrade chart"; fi
+    - >
+      if [ ${DEPLOYS} -eq 0 ]; then
+      helm install $RELEASE_NAME . --namespace=voffice-dev --set image.repository=$CI_REGISTRY_IMAGE --set image.tag=$CI_COMMIT_SHORT_SHA;
+      else helm upgrade $RELEASE_NAME . --namespace=voffice-dev --set image.repository=$CI_REGISTRY_IMAGE --set image.tag=$CI_COMMIT_SHORT_SHA; fi
+  only:
+    refs:
+      - master

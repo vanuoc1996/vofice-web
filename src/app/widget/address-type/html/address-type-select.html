@@ -1,0 +1,7 @@
+<p-dropdown *ngIf="!widgetConfig.multiple" [(ngModel)]="selected"
+			[options]="options" [optionLabel]="widgetConfig.labelName"
+			(onChange)="handleOnChange($event)"></p-dropdown>
+
+<p-multiSelect *ngIf="widgetConfig.multiple" [(ngModel)]="selected"
+			   [options]="options" [dataKey]="widgetConfig.primaryKeyName" [optionLabel]="widgetConfig.labelName"
+			   (onChange)="handleOnChange($event)"></p-multiSelect>

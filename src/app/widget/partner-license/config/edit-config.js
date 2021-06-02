@@ -1,0 +1,192 @@
+export const EDIT_CONFIG  = {
+	"layout":
+		{
+			"legend": "partner license",
+			"statementId": "partner",
+			"primaryKeyName": "licenseId",
+			"parentKeyName": "",
+			"partitionKeyName": "",
+			"controls": [
+				{
+					"code": "licenseId",
+					"field": "licenseId",
+					"label": "licenseId",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "partnerId",
+					"field": "partnerId",
+					"label": "partnerId",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "typeId",
+					"field": "typeId",
+					"label": "typeId",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "licenseNo",
+					"field": "licenseNo",
+					"label": "licenseNo",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "issuer",
+					"field": "issuer",
+					"label": "issuer",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "issueOrgId",
+					"field": "issueOrgId",
+					"label": "issueOrgId",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "issueDate",
+					"field": "issueDate",
+					"label": "issueDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "expireDate",
+					"field": "expireDate",
+					"label": "expireDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "termDate",
+					"field": "termDate",
+					"label": "termDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "startDate",
+					"field": "startDate",
+					"label": "startDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "endDate",
+					"field": "endDate",
+					"label": "endDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "description",
+					"field": "description",
+					"label": "description",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "status",
+					"field": "status",
+					"label": "status",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "deleted",
+					"field": "deleted",
+					"label": "deleted",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "syncDate",
+					"field": "syncDate",
+					"label": "syncDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				}
+			],
+		}
+};

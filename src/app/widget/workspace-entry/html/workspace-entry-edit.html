@@ -1,0 +1,197 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+	<div class="card-body">
+		<!--h4 class="card-title mb-4">Add new product</h4>-->
+
+		<div [formGroup]="editForm">
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'workspace-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="workspaceId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'type-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="typeId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'code' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="code" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="name" pInputText type="text"  [required]='true' [maxLength]='300'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'invite-type' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="inviteType" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'confirm-type' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="confirmType" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'resource-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="resourceName" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'resource-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="resourceId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'creator-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="creatorId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'folder-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="folderId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'file-entry-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="fileEntryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'file-entry-type-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="fileEntryTypeId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'wiki' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="wiki" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'gallery' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="gallery" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'conversation' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="conversation" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'chat' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="chat" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'calendar' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="calendar" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'task' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="task" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'search' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="search" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'drive' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="drive" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'visible' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="visible" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'opened' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="opened" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'archived' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="archived" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'project' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="project" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'start-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="startDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'end-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="endDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'description' | translate }}</label>
+				<div class="p-col-6">
+					<p-editor formControlName="description" [style]="{'height':'120px'}"></p-editor>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'status' | translate }}</label>
+				<div class="col-6">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+
+			<div class="border-top p-3 mt-3">
+				<button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save" (click)="onUpdate()"></button>
+				<button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash" (click)="onDelete()"></button>
+				<button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject" (click)="onCancel()"></button>
+			</div>
+		</div>
+	</div>
+</div>

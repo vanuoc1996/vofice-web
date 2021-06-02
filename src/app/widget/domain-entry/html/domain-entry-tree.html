@@ -1,0 +1,81 @@
+<app-page-title title="{{widgetConfig.legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+	<form [formGroup]="searchForm">
+		<div *ngIf="widgetConfig.enableToolbar" class="clearfix">
+			<div  class="float-left" *ngIf="widgetConfig.enableFilter">
+				<p-splitButton label="{{'FILTER' | translate }}" (onClick)="changeFinder({code: 'all'})"
+				               [model]="searchMenuItems" *ngIf="searchMenuItems.length > 0">
+				</p-splitButton>
+				<label>
+					<input type="text" pInputText placeholder="{{'keyword' | translate }}" formControlName="textual">
+					<button pButton type="button" icon="pi pi-search" (click)="search()" ngDefaultControl></button>
+				</label>
+			</div>
+			<div  class="float-right">
+				<button pButton type="button" icon="pi pi-cog" (click)="actionMenu.toggle($event)" class="mr-1"></button>
+				<p-tieredMenu #actionMenu [model]="settingMenuItems" [popup]="true" ></p-tieredMenu>
+				<p-splitButton label="{{'ACTION' | translate }}" class="mr-2"
+				               [model]="actionMenuItems" *ngIf="actionMenuItems.length > 0">
+				</p-splitButton>
+			</div>
+		</div>
+		<p-panel #searchPanel *ngIf="showCustomSearch" [formGroup]="searchForm" header="{{'CONDITION' | translate }}" [toggleable]="true">
+		<div class="form-group row">
+			<label class="col-2 col-form-label">{{'type' | translate }}</label>
+			<div class="col-6">
+				<input formControlName="type" pInputText type="text">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-2 col-form-label">{{'status' | translate }}</label>
+			<div class="col-6">
+				<p-multiSelect
+												   formControlName="status" optionLabel="label" optionValue="value"
+												   defaultLabel="Select a status"
+												   [style]="{'width': '100%'}">
+				</p-multiSelect>
+			</div>
+		</div>
+		</p-panel>
+	</form>
+	<p-treeTable #treeTable [value]="treeNodes"
+	         [lazy]="lazy" [lazyLoadOnInit]="lazyLoadOnInit" (onLazyLoad)="loadLazy($event)" (onNodeExpand)="onNodeExpand($event)"
+	         class="w-100" [paginator]="true" [loading]="loading" [scrollable]="true" [resizableColumns]="true"
+	         [rows]="10" [totalRecords]="totalRecords"
+	         [selectionMode]="widgetConfig.enableRowCheck ? 'checkbox' : 'single'" [(selection)]="selectedEntries"
+	>
+		<ng-template pTemplate="emptymessage">
+			<tr>
+				{{'no-records-found' | translate }}
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="header">
+			<tr>
+	                <th  *ngIf="isToggleOn('name')">
+	                        <p-treeTableHeaderCheckbox *ngIf="widgetConfig.enableRowCheck"></p-treeTableHeaderCheckbox>
+		                {{'name' | translate }}
+	                </th>
+				<th style="width: 10%"></th>
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+			<tr >
+	                <td class="ui-resizable-column" *ngIf="isToggleOn('name')">
+			                <p-treeTableToggler [rowNode]="rowNode"> </p-treeTableToggler>
+			                <p-treeTableCheckbox [value]="rowNode" *ngIf="widgetConfig.enableRowCheck"></p-treeTableCheckbox>
+		                {{rowData['name']}}
+	                </td>
+				<td style="width: 10%">
+					<button pButton icon="pi pi-plus" class="p-button-rounded p-button-success mr-1" (click)="onAdd({data: rowData})"></button>
+					<button pButton icon="pi pi-pencil" class="p-button-rounded p-button-success mr-1" (click)="onEdit({data: rowData})"></button>
+				</td>
+			</tr>
+		</ng-template>
+	</p-treeTable>
+
+	<p-sidebar [(visible)]="editDisplay" position="right" [style]="{'overflow': 'auto', width:'100em'}" [modal]="false" blockScroll="true">
+		<app-domain-edit #widgetEdit autoClose="true" (closeEvent)="onClose($event)">
+		</app-domain-edit>
+	</p-sidebar>

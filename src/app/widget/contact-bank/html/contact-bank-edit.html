@@ -1,0 +1,173 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+	<div class="card-body">
+		<!--h4 class="card-title mb-4">Add new product</h4>-->
+
+		<div [formGroup]="editForm">
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'resource-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="resourceName" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'resource-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="resourceId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'type-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="typeId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'bank-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="bankId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="name" pInputText type="text"  [required]='true' [maxLength]='300'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'iban' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="IBAN" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'swift' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="SWIFT" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'bic' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="BIC" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'routing-number' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="routingNumber" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'account-number' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="accountNumber" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'holder-name' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="holderName" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'street1' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="street1" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'street2' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="street2" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'street3' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="street3" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'city' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="city" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'zip' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="zip" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'region-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="regionId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'country-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="countryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'territory-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="territoryId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'mailing' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="mailing" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'main' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="main" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'verified' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="verified" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'description' | translate }}</label>
+				<div class="p-col-6">
+					<p-editor formControlName="description" [style]="{'height':'120px'}"></p-editor>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'status' | translate }}</label>
+				<div class="col-6">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+
+			<div class="border-top p-3 mt-3">
+				<button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save" (click)="onUpdate()"></button>
+				<button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash" (click)="onDelete()"></button>
+				<button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject" (click)="onCancel()"></button>
+			</div>
+		</div>
+	</div>
+</div>

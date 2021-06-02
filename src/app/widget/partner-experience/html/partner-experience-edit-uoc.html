@@ -1,0 +1,143 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+    <div class="card-body">
+        <!--h4 class="card-title mb-4">Add new product</h4>-->
+
+        <div [formGroup]="editForm">
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'experience-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="experienceId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'type-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="typeId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'partner-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="partnerId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'organization-id' | translate }}</label>
+                <!--				<div class="col-6">-->
+                <!--					<p-inputNumber formControlName="organizationId" mode="decimal" ></p-inputNumber>-->
+                <!--				</div>-->
+                <app-partner-select formControlName="organizationId"></app-partner-select>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'organization-type-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="organizationTypeId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'organization-size-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="organizationSizeId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'company-name' | translate }}</label>
+                <div class="col-6">
+                    <input formControlName="companyName" pInputText type="text" [maxLength]='30'>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'occupation-id' | translate }}</label>
+                <!--                <div class="col-6">-->
+                <!--                    <p-inputNumber formControlName="occupationId" mode="decimal"></p-inputNumber>-->
+                <!--                </div>-->
+                <app-occupation-type-select formControlName="occupationId"></app-occupation-type-select>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'position-id' | translate }}</label>
+                <!--                <div class="col-6">-->
+                <!--                    <p-inputNumber formControlName="positionId" mode="decimal"></p-inputNumber>-->
+                <!--                </div>-->
+                <app-position-type-select formControlName="positionId"></app-position-type-select>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'reason-id' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="reasonId" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'job-title' | translate }}</label>
+                <div class="col-6">
+                    <input formControlName="jobTitle" pInputText type="text" [maxLength]='30'>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'total-income' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="totalIncome" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'base-income' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="baseIncome" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'insurance' | translate }}</label>
+                <div class="col-6">
+                    <p-inputNumber formControlName="insurance" mode="decimal"></p-inputNumber>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'start-date' | translate }}</label>
+                <div class="col-6">
+                    <p-calendar formControlName="startDate" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'end-date' | translate }}</label>
+                <div class="col-6">
+                    <p-calendar formControlName="endDate" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'description' | translate }}</label>
+                <div class="p-col-6">
+                    <p-editor formControlName="description" [style]="{'height':'120px'}"></p-editor>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'status' | translate }}</label>
+                <div class="col-6">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+                <div class="col-6">
+                    <p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+                <div class="col-6">
+                    <p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+
+            <div class="border-top p-3 mt-3">
+                <button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save"
+                        (click)="onUpdate()"></button>
+                <button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash"
+                        (click)="onDelete()"></button>
+                <button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject"
+                        (click)="onCancel()"></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<app-page-title title="{{legend | translate}}"></app-page-title>
+
+<p-messages [(value)]="messages" [enableService]="false"></p-messages>
+
+<div class="card border-top">
+	<div class="card-body">
+		<!--h4 class="card-title mb-4">Add new product</h4>-->
+
+		<div [formGroup]="editForm">
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'comment-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="commentId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'workspace-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="workspaceId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'attached-id' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="attachedId" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'content' | translate }}</label>
+				<div class="col-6">
+					<input formControlName="content" pInputText type="text"  [maxLength]='30'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'user-rating' | translate }}</label>
+				<div class="col-6">
+					<p-inputNumber formControlName="userRating" mode="decimal" ></p-inputNumber>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'last-publish-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="lastPublishDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'status' | translate }}</label>
+				<div class="col-6">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'deleted' | translate }}</label>
+				<div class="col-6">
+					<p-checkbox formControlName="deleted" [binary]="true"></p-checkbox>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">{{'sync-date' | translate }}</label>
+				<div class="col-6">
+					<p-calendar formControlName="syncDate" dateFormat="dd.mm.yy"></p-calendar>
+				</div>
+			</div>
+
+			<div class="border-top p-3 mt-3">
+				<button pButton type="button" class="mr-2" label="{{'UPDATE' | translate }}" icon="pi pi-save" (click)="onUpdate()"></button>
+				<button pButton type="button" class="mr-2" label="{{'DELETE' | translate }}" icon="pi pi-trash" (click)="onDelete()"></button>
+				<button pButton type="button" class="mr-2" label="{{'CANCEL' | translate }}" icon="pi pi-eject" (click)="onCancel()"></button>
+			</div>
+		</div>
+	</div>
+</div>

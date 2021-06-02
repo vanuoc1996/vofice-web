@@ -1,0 +1,192 @@
+export const EDIT_CONFIG  = {
+	"layout":
+		{
+			"legend": "product",
+			"statementId": "textual",
+			"primaryKeyName": "productId",
+			"parentKeyName": "parentId",
+			"partitionKeyName": "",
+			"controls": [
+				{
+					"code": "type",
+					"field": "type",
+					"label": "type",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "lru",
+					"field": "lru",
+					"label": "lru",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "code",
+					"field": "code",
+					"label": "code",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "name",
+					"field": "name",
+					"label": "name",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "sku",
+					"field": "sku",
+					"label": "sku",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "price",
+					"field": "price",
+					"label": "price",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "quantity",
+					"field": "quantity",
+					"label": "quantity",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "priority",
+					"field": "priority",
+					"label": "priority",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "startDate",
+					"field": "startDate",
+					"label": "startDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "endDate",
+					"field": "endDate",
+					"label": "endDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "expireDate",
+					"field": "expireDate",
+					"label": "expireDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "description",
+					"field": "description",
+					"label": "description",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "status",
+					"field": "status",
+					"label": "status",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "deleted",
+					"field": "deleted",
+					"label": "deleted",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": false,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				},
+				{
+					"code": "syncDate",
+					"field": "syncDate",
+					"label": "syncDate",
+					"visible": true,
+					"initialise": true,
+					"placeholder": "",
+					"datetime": true,
+					"initValue": null,
+					"inputValue": null,
+					"options": null
+				}
+			],
+		}
+};

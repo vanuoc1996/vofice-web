@@ -1,0 +1,84 @@
+{
+	"layout":
+		{
+			"name": "bank type",
+			"showSearchPanel": true,
+			"enableToolbar": true,
+			"enableRowCheck": true,
+			"enableExport": true,
+			"tableColumns": [
+				{
+				"columns": [
+					{
+						"code": "code",
+						"name": "code",
+						"custom": true
+					},
+					{
+						"code": "name",
+						"name": "name",
+						"custom": true
+					}
+					]
+				}
+			],
+			"searchColumns": [
+				{
+				"columns": [
+					{
+						"code": "code",
+						"field": "code",
+						"label": "code",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "name",
+						"field": "name",
+						"label": "name",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "referenceCode",
+						"field": "referenceCode",
+						"label": "referenceCode",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					},
+					{
+						"code": "status",
+						"field": "status",
+						"label": "status",
+						"visible": true,
+						"placeholder": "",
+						"datetime": false,
+						"initValue": null,
+						"inputValue": null,
+						"options": null
+					}
+					]
+				}
+			],
+			"finders": [
+				],
+			"orders": [
+				{
+					"code": "default",
+					"label": "default"
+				}
+				]
+		}
+}
